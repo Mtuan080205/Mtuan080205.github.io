@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mtuan1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .video-container {
+            margin: 20px;
+        }
+        video {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Conan Thám Tử Lừng Danh (tập 1)</h1>
+
+    <div class="video-container">
+        <!-- Video element will be dynamically updated -->
+        <video id="videoPlayer" controls>
+            <source id="videoSource" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+    </div>
+
+    <script>
+        // The video URL
+        const videoUrl = 'https://files.catbox.moe/w87t5w.mp4';
+
+        // Get the video element and source
+        const videoElement = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+
+        // Set the source of the video
+        videoSource.src = videoUrl;
+
+        // Load the new video source
+        videoElement.load();
+    </script>
+
+</body>
+</html>
