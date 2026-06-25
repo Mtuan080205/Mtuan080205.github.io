@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Yêu Thương</title>
+    <style>
+        /* Toàn bộ phông nền màu hồng nhạt của trang web */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FFE1E6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Khung hộp thư màu hồng bo góc */
+        .card-container {
+            position: relative;
+            background-color: #FFF0F2;
+            border: 2px solid #FFAEBC;
+            border-radius: 20px;
+            padding: 30px;
+            width: 85%;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(255, 174, 188, 0.2);
+            box-sizing: border-box;
+        }
+
+        /* Icon trái tim trang trí góc trên bên trái */
+        .decor-hearts {
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 35px;
+            user-select: none;
+        }
+
+        /* Tiêu đề chính */
+        .title {
+            color: #E05275;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .envelope-icon {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Gợi ý mật khẩu */
+        .password-label {
+            color: #E07A93;
+            font-size: 15px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Ô nhập liệu (Input) */
+        .input-field {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #FFC4D0;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #555;
+            outline: none;
+            box-sizing: border-box;
+            background-color: #FFF;
+        }
+
+        .input-field::placeholder {
+            color: #A9A9A9;
+        }
+
+        /* Dòng chú thích nhỏ phía dưới ô nhập */
+        .note {
+            color: #A9A9A9;
+            font-size: 13px;
+            margin-top: 6px;
+            margin-bottom: 20px;
+        }
+
+        /* Nút Đồng ý */
+        .submit-btn {
+            background-color: transparent;
+            color: #E05275;
+            border: 1.5px solid #E05275;
+            border-radius: 8px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #E05275;
+            color: #FFF;
+        }
+
+        /* Hình ảnh gấu/sóc hoạt hình ở góc phải */
+        .character-img {
+            position: absolute;
+            bottom: -5px;
+            right: -10px;
+            width: 110px;
+            height: auto;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="decor-hearts">💖</div>
+        
+        <div class="title">Có một lời yêu thương gửi tới bạn</div>
+        <div class="envelope-icon">💌</div>
+        
+        <div class="password-label">Mật khẩu của trái tim 🧡</div>
+        <input type="text" class="input-field" placeholder="Nhập vào đây" id="passwordInput">
+        <div class="note">Mật khẩu phải ghi liền không dấu*</div>
+        
+        <button class="submit-btn" onclick="checkPassword()">Đồng ý</button>
+
+        <img class="character-img" src="https://openclipart.org/image/400px/309228" alt="Cute character">
+    </div>
+
+    <script>
+        // Đoạn code JavaScript nhỏ để xử lý khi người dùng ấn nút "Đồng ý"
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value.trim();
+            
+            if(password === "") {
+                alert("Bạn chưa nhập mật khẩu mà! 🥺");
+            } else {
+                // Bạn có thể đổi chữ 'yeuanh' hoặc 'yeuem' tùy theo mật khẩu bạn muốn đặt
+                if(password.toLowerCase() === "yeuanh" || password.toLowerCase() === "yeuem") {
+                    alert("Mật khẩu chính xác! Đang mở lời yêu thương... ❤️");
+                    // window.location.href = "trang-tiep-theo.html"; // Mở dòng này nếu muốn chuyển trang
+                } else {
+                    alert("Sai mật khẩu mất rồi, thử lại xem nè! 🌸");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
